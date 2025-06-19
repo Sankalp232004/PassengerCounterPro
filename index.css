@@ -1,0 +1,67 @@
+body {
+    background-image: url("station.jpg");
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    transition: transform 0.3s; /* Added transition for animation */
+}
+
+button {
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    width: 220px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+#increment-btn {
+    background: #c0392b;
+}
+
+#increment-btn:hover {
+    background: #e74c3c;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+#save-btn {
+    background: #27ae60;
+}
+
+#save-btn:hover {
+    background: #2ecc71;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+#reset-btn {
+    background: #3498db; /* New reset button color */
+}
+
+#reset-btn:hover {
+    background: #5dade2; /* Hover effect for reset button */
+}
