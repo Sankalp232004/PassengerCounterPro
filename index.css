@@ -12,7 +12,7 @@ body {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Added shadow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -25,7 +25,7 @@ h2 {
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 20px;
-    transition: transform 0.3s; /* Added transition for animation */
+    transition: transform 0.3s;
 }
 
 button {
@@ -37,7 +37,7 @@ button {
     margin-bottom: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+    transition: background 0.3s, transform 0.2s;
 }
 
 #increment-btn {
@@ -46,7 +46,7 @@ button {
 
 #increment-btn:hover {
     background: #e74c3c;
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.05);
 }
 
 #save-btn {
@@ -55,13 +55,13 @@ button {
 
 #save-btn:hover {
     background: #2ecc71;
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.05);
 }
 
 #reset-btn {
-    background: #3498db; /* New reset button color */
+    background: #3498db;
 }
 
 #reset-btn:hover {
-    background: #5dade2; /* Hover effect for reset button */
+    background: #5dade2;
 }
