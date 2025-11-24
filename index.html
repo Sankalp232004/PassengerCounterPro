@@ -1,16 +1,114 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
-    <title>Passenger Counter App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Passenger Counter Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>People Entered:</h1>
-        <h2 id="count-el">0</h2>
-        <button id="increment-btn" onclick="increment()">INCREMENT</button>
-        <button id="save-btn" onclick="save()">SAVE</button>
-        <button id="reset-btn" onclick="reset()">RESET</button>
-        <p id="save-el">Previous Entries: </p>
+    <div class="app">
+        <header class="hero">
+            <div class="identity">
+                <div class="badge">Shift Live</div>
+                <h1>Passenger Counter Pro</h1>
+                <p>Track boarding flow in real time, highlight insights, and ship results straight to recruiters.</p>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span>Shift start</span>
+                    <strong id="shift-start">--</strong>
+                </div>
+                <div class="stat">
+                    <span>Station</span>
+                    <strong id="station-label">Downtown Hub</strong>
+                </div>
+                <button id="theme-toggle">Toggle Theme</button>
+            </div>
+        </header>
+
+        <section class="panels">
+            <article class="panel counter-panel">
+                <div class="counter-display">
+                    <div class="label">Current count</div>
+                    <div id="count-value">0</div>
+                    <div class="progress">
+                        <div id="progress-fill"></div>
+                    </div>
+                    <div class="progress-label">
+                        Goal <span id="goal-label">120</span> riders
+                    </div>
+                </div>
+                <div class="counter-controls">
+                    <button id="decrement-btn" aria-label="decrease">-</button>
+                    <button id="increment-btn" aria-label="increase">+1</button>
+                    <button id="quick-add-btn" aria-label="quick add">+5</button>
+                </div>
+                <div class="primary-actions">
+                    <button id="save-btn">Log entry</button>
+                    <button id="reset-btn">Reset count</button>
+                </div>
+            </article>
+
+            <article class="panel control-panel">
+                <div class="form-field">
+                    <label for="station-input">Station name</label>
+                    <input id="station-input" type="text" placeholder="e.g. Midtown Central" />
+                </div>
+                <div class="form-field">
+                    <label for="goal-input">Daily goal</label>
+                    <input id="goal-input" type="number" min="10" step="10" />
+                </div>
+                <div class="form-field">
+                    <label for="line-select">Line</label>
+                    <select id="line-select">
+                        <option value="Orange">Orange Line</option>
+                        <option value="Blue">Blue Line</option>
+                        <option value="Green">Green Line</option>
+                        <option value="Silver">Silver Line</option>
+                    </select>
+                </div>
+                <div class="insights">
+                    <div>
+                        <span>Shift total</span>
+                        <strong id="shift-total">0</strong>
+                    </div>
+                    <div>
+                        <span>Last log</span>
+                        <strong id="last-entry">--</strong>
+                    </div>
+                    <div>
+                        <span>Avg per log</span>
+                        <strong id="avg-entry">0</strong>
+                    </div>
+                    <div>
+                        <span>Entries</span>
+                        <strong id="total-entries">0</strong>
+                    </div>
+                </div>
+                <div class="secondary-actions">
+                    <button id="undo-btn">Undo last</button>
+                    <button id="clear-history">Clear history</button>
+                    <button id="export-btn">Export CSV</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="timeline">
+            <div class="timeline-head">
+                <h2>Journey log</h2>
+                <div id="trend-indicator">Steady flow</div>
+            </div>
+            <ul id="history-list"></ul>
+        </section>
+
+        <footer class="footer">
+            <div>Crafted to shine on GitHub • Passenger analytics inspired</div>
+            <div class="footer-meta">Data persists locally for interviews</div>
+        </footer>
     </div>
     <script src="index.js"></script>
 </body>
