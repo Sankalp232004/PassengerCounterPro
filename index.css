@@ -1,82 +1,67 @@
-:root{
-    --bg:#0f1724;
-    --card:#0b1630;
-    --muted:#94a3b8;
-    --accent:#f7a501;
-    --glass:rgba(255,255,255,0.03);
+body {
+    background-image: url("station.jpg");
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
-*{box-sizing:border-box}
-
-html,body{height:100%}
-
-body{
-    margin:0;
-    font-family:'Inter',system-ui,Arial,Helvetica,sans-serif;
-    background:linear-gradient(180deg,#071226 0%, #071b2a 60%);
-    color:#e6eef6;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:28px;
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.app{
-    width:100%;
-    max-width:1100px;
-    display:grid;
-    grid-template-columns:1fr 360px;
-    gap:20px;
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 36px;
 }
 
-.hero{
-    grid-column:1/-1;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
-.brand{display:flex;align-items:center;gap:14px}
-.logo{width:56px;height:56px;flex:0 0 56px}
-.brand h1{margin:0;font-size:20px;letter-spacing:0.6px}
-.tag{margin:0;color:var(--muted);font-size:13px}
-
-.actions{display:flex;gap:10px}
-.actions button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
-
-.scoreboard{display:flex;gap:20px;align-items:stretch}
-.team{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
-.team-name{background:transparent;border:none;color:#e6eef6;font-weight:700;font-size:18px;text-align:center}
-.team-name:focus{outline:none;border-bottom:1px solid rgba(255,255,255,0.04)}
-.score{font-size:72px;font-weight:800;letter-spacing:1px}
-.controls{display:flex;gap:10px}
-.controls .point{background:var(--accent);border:none;padding:12px 18px;border-radius:10px;color:#1b1b1b;font-weight:700;font-size:16px;cursor:pointer}
-.controls .point[data-points="1"]{background:#ffd166}
-
-.center{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:18px;border-radius:12px;background:var(--card)}
-.meta{display:flex;gap:18px;align-items:center}
-.quarter{font-weight:700;color:var(--muted)}
-.timer{font-size:28px;font-weight:800}
-.possession{color:var(--muted)}
-.center-controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.center-controls button{padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);cursor:pointer}
-
-.history{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;height:460px;overflow:auto}
-.history h3{margin:0 0 8px 0}
-.history ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.history li{padding:8px;border-radius:8px;background:var(--glass);font-size:14px;color:var(--muted)}
-
-.footer{grid-column:1/-1;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-top:8px}
-
-@media (max-width:920px){
-    .app{grid-template-columns:1fr;}
-    .history{height:260px}
-    .score{font-size:56px}
+button {
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    width: 220px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
-@media (max-width:420px){
-    .controls{flex-direction:column}
-    .score{font-size:44px}
+#increment-btn {
+    background: #c0392b;
 }
 
+#increment-btn:hover {
+    background: #e74c3c;
+    transform: scale(1.05);
+}
+
+#save-btn {
+    background: #27ae60;
+}
+
+#save-btn:hover {
+    background: #2ecc71;
+    transform: scale(1.05);
+}
+
+#reset-btn {
+    background: #3498db;
+}
+
+#reset-btn:hover {
+    background: #5dade2;
+}
