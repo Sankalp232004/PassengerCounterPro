@@ -1,3 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Basketball Scorecard — PassengerCounterPro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#f7a501" />
+          <path d="M12 32c6-8 44-8 44 0" stroke="#6b2b00" stroke-width="3" fill="none" stroke-linecap="round" />
+          <path d="M32 4v56" stroke="#6b2b00" stroke-width="3" stroke-linecap="round" />
+        </svg>
+        <div>
+          <h1>Basketball Scorecard</h1>
+          <p class="tag">Clean • Responsive • Presentable</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="theme-toggle">Toggle Theme</button>
+        <button id="export-btn">Export CSV</button>
+      </div>
+    </header>
+
+    <main class="scoreboard">
+      <section class="team" id="teamA-panel">
+        <input id="teamA-name" class="team-name" value="Home" />
+        <div class="score" id="teamA-score">0</div>
+        <div class="controls">
+          <button class="point" data-team="A" data-points="3">+3</button>
+          <button class="point" data-team="A" data-points="2">+2</button>
+          <button class="point" data-team="A" data-points="1">FT</button>
+        </div>
+      </section>
+
+      <section class="center">
+        <div class="meta">
+          <div class="quarter">Q<span id="quarter">1</span></div>
+          <div class="timer" id="timer">10:00</div>
+          <div class="possession">Possession: <span id="possession">A</span></div>
+        </div>
+        <div class="center-controls">
+          <button id="start-stop">Start</button>
+          <button id="reset-clock">Reset Clock</button>
+          <button id="next-quarter">Next Q</button>
+          <button id="undo">Undo</button>
+          <button id="clear-game">Clear Game</button>
+        </div>
+      </section>
+
+      <section class="team" id="teamB-panel">
+        <input id="teamB-name" class="team-name" value="Away" />
+        <div class="score" id="teamB-score">0</div>
+        <div class="controls">
+          <button class="point" data-team="B" data-points="3">+3</button>
+          <button class="point" data-team="B" data-points="2">+2</button>
+          <button class="point" data-team="B" data-points="1">FT</button>
+        </div>
+      </section>
+    </main>
+
+    <aside class="history">
+      <h3>Plays</h3>
+      <ul id="history-list"></ul>
+    </aside>
+
+    <footer class="footer">
+      <div>Made to showcase on GitHub • Use for interviews</div>
+      <div class="links"><a href="https://github.com/Sankalp232004/PassengerCounterPro" target="_blank">Project on GitHub</a></div>
+    </footer>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
 <html>
 <head>
     <link rel="stylesheet" href="index.css">
